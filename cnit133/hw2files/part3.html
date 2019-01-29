@@ -16,27 +16,24 @@ number2 = document.forms["myform"].elements["num2"].value;
 number3 = document.forms["myform"].elements["num3"].value;
 number4 = document.forms["myform"].elements["num4"].value;
 number5 = document.forms["myform"].elements["num5"].value;
+posnum = 0
+zeroes = 0
+negnum = 0
 var nums = [number1, number2, number3, number4, number5]
-
 for (i = 0; i < nums.length; i++) {
-  n1 = parseInt(i);
+  n1 = parseInt(nums[i]);
   if (n1 > 0) {
       posnum = posnum + 1
   } 
-  else if (n1 = 0) {
-      zeroes = zeroes + 1
-  }
-  else{
+  else if (n1 < 0) {
       negnum = negnum + 1
   }
+  else if (n1 == 0) {
+      zeroes = zeroes + 1
+  }
 }
-n1 = parseInt(number1);
-n2 = parseInt(number2);
-n3 = parseInt(number3);
-n4 = parseInt(number4);
-n5 = parseInt(number5);
 
-alert(posnum + " " + zeroes + " " + negnum)
+alert("Number of positive numbers: " + posnum + '\n' + zeroes + " " + negnum)
 }
 </script>
 
