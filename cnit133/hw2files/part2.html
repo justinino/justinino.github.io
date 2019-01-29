@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="using forms and reading from forms">
+<title>Form example 1</title>
+
+<style>
+input {text-align: right;}
+body {background-color: #f5f5dc;}
+.body { width: 550px; margin: 0px auto;}
+</style>
+
+<script>
+function process()
+{
+
+var number1, number2, number3, n1, n2, n3, sum, average, product, min, max, result;
+
+number1 = document.forms["myform"].elements["num1"].value;
+number2 = document.forms["myform"].elements["num2"].value;
+number3 = document.forms["myform"].elements["num3"].value;
+
+
+n1 = parseInt(number1);
+n2 = parseInt(number2);
+n3 = parseInt(number3);
+
+sum = n1 + n2 + n3; alert("The sum of the numbers is " + sum); 
+
+average = (n1 + n2 + n3)/3; 
+
+product = n1*n2*n3; 
+
+min = Math.min(n1,n2,n3); 
+
+max = Math.max(n1,n2,n3); 
+
+alert("The sum of the numbers is " + sum + '\n' + "The average of the numbers is " + average + '\n' + "The product of the numbers is " + product + '\n' + "The min of the numbers is " + min + '\n' + "The max of the numbers is " + max)
+
+}
+
+</script>
+
+</head>
+
+<body>
+<section class="body">
+<h3>Heading to avoid warning from validator</h3>
+
+<form name="myform">
+<table>
+<tr>
+<td>First Number:</td>
+<td><input type="text" name="num1" size="10"></td>
+</tr>
+<tr>
+<td>Second Number:</td>
+<td><input type="text" name="num2" size="10"></td>
+</tr>
+<tr>
+<td>Third Number:</td>
+<td><input type="text" name="num3" size="10"></td>
+</tr>
+</table>
+<br>
+<input type="button" onclick="process()" value="SUBMIT">
+<input type="reset" value="RESET">
+</form>
+</section>
+</body>
+</html>
