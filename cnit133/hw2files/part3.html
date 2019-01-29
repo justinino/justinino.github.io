@@ -3,26 +3,40 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="CNIT 133 Homework 2 Part 2">
-  <title>CNIT 133 Homework 2 Part 2</title>
+  <meta name="description" content="CNIT 133 Homework 2 Part 3">
+  <title>CNIT 133 Homework 2 Part 3</title>
   <link rel="stylesheet" href="../styles.css">
 
 <script>
 function process()
 {
-var number1, number2, number3, n1, n2, n3, sum, average, product, min, max, result;
+var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5, negnum, posnum, zeroes, i;
 number1 = document.forms["myform"].elements["num1"].value;
 number2 = document.forms["myform"].elements["num2"].value;
 number3 = document.forms["myform"].elements["num3"].value;
+number4 = document.forms["myform"].elements["num4"].value;
+number5 = document.forms["myform"].elements["num5"].value;
+var nums = [number1, number2, number3, number4, number5]
+
+for (i = 0; i < nums.length; i++) {
+  n1 = parseInt(i);
+  if (n1 > 0) {
+      posnum++
+  } 
+  else if (n1 = 0) {
+      zeroes++
+  }
+  else{
+      negnum++
+  }
+}
 n1 = parseInt(number1);
 n2 = parseInt(number2);
 n3 = parseInt(number3);
-sum = n1 + n2 + n3
-average = (n1 + n2 + n3)/3; 
-product = n1*n2*n3; 
-min = Math.min(n1,n2,n3); 
-max = Math.max(n1,n2,n3); 
-alert("The sum of the numbers is " + sum + '\n' + "The average of the numbers is " + average + '\n' + "The product of the numbers is " + product + '\n' + "The min of the numbers is " + min + '\n' + "The max of the numbers is " + max)
+n4 = parseInt(number4);
+n5 = parseInt(number5);
+
+alert(posnum + " " + zeroes + " " + negnum)
 }
 </script>
 
