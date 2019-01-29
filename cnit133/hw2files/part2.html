@@ -1,16 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-
-<head> 
-<meta charset="utf-8">
-<meta name="description" content="using forms and reading from forms">
-<title>Form example 1</title>
-
-<style>
-input {text-align: right;}
-body {background-color: #f5f5dc;}
-.body { width: 550px; margin: 0px auto;}
-</style>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="CNIT 133 Homework 2 Part 2">
+  <title>CNIT 133 Homework 2 Part 2</title>
+  <link rel="stylesheet" href="./styles.css">
 
 <script>
 function process()
@@ -26,8 +21,6 @@ number3 = document.forms["myform"].elements["num3"].value;
 n1 = parseInt(number1);
 n2 = parseInt(number2);
 n3 = parseInt(number3);
-
-sum = n1 + n2 + n3; alert("The sum of the numbers is " + sum); 
 
 average = (n1 + n2 + n3)/3; 
 
@@ -47,7 +40,7 @@ alert("The sum of the numbers is " + sum + '\n' + "The average of the numbers is
 
 <body>
 <section class="body">
-<h3>Heading to avoid warning from validator</h3>
+<h3>Enter 3 numbers:</h3>
 
 <form name="myform">
 <table>
