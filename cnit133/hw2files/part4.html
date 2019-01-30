@@ -13,13 +13,11 @@
   <a href="https://justinino.github.io/cnit133/hw2files/ec.html">Extra Credit</a></center></h3>
 <h1><center>CNIT 133 Homework 2 Part 4</center></h1>
 <script>
-document.write( "<table style='border: 1px solid black;'><tr> " + "<th>Number</th> <th>Square</th> <th>Cubed</th></tr>" );
-document.write( "<tr style='text-align:right;'><td>" + 1 + "</td>" + "<td>" + Math.pow(1, 2) + "</td>" + "<td>" + Math.pow(1, 3) + "</td></tr>" ); 
-document.write( "<tr style='text-align:right;'><td>" + 2 + "</td>" + "<td>" + Math.pow(2, 2) + "</td>" + "<td>" + Math.pow(2, 3) + "</td></tr>" ); 
-document.write( "<tr style='text-align:right;'><td>" + 3 + "</td>" + "<td>" + Math.pow(3, 2) + "</td>" + "<td>" + Math.pow(3, 3) + "</td></tr>" ); 
-document.write( "<tr style='text-align:right;'><td>" + 4 + "</td>" + "<td>" + Math.pow(4, 2) + "</td>" + "<td>" + Math.pow(4, 3) + "</td></tr>" ); 
-document.write( "<tr style='text-align:right;'><td>" + 5 + "</td>" + "<td>" + Math.pow(5, 2) + "</td>" + "<td>" + Math.pow(5, 3) + "</td></tr>" ); 
-document.write( "<tr style='text-align:right;'><td>" + 6 + "</td>" + "<td>" + Math.pow(6, 2) + "</td>" + "<td>" + Math.pow(6, 3) + "</td></tr>" ); 
+document.write( "<center><table style='border: 1px solid black;'><tr> " + "<th>Number</th> <th>Square</th> <th>Cubed</th></tr>" );
+for (i = 1; i < 7; i++) {
+	document.write( "<tr style='text-align:right;'><td>" + i + "</td>" + "<td>" + Math.pow(i, 2) + "</td>" + "<td>" + Math.pow(i, 3) + "</td></tr>" ); 
+}
+document.write("</center>"); 
 </script>
 <script src="js/scripts.js"></script>
 </body>
