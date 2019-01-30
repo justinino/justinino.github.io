@@ -6,7 +6,7 @@
   <meta name="description" content="CNIT 133 Homework 2 Part 3">
   <title>CNIT 133 Homework 2 Part 3</title>
   <link rel="stylesheet" href="../styles.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 function process()
 {
@@ -33,15 +33,23 @@ for (i = 0; i < nums.length; i++) {
   }
 }
 
-alert("Number of positive numbers: " + posnum + '\n' + zeroes + " " + negnum)
+document.getElementById("TEXTAREA").value = "Number of negative numbers: " + negnum + "\n" + "Number of positive numbers: " + posnum + "\n" + "Number of zeroes: " + zeroes;
 }
+</script>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("TEXTAREA").fadeTo("slow", 0.15);
+  });
+});
 </script>
 
 </head>
 
 <body>
 <section class="body">
-<h3>Enter 3 numbers:</h3>
+<h3>Enter 5 numbers:</h3>
 
 <form name="myform">
 <table>
@@ -67,6 +75,10 @@ alert("Number of positive numbers: " + posnum + '\n' + zeroes + " " + negnum)
 <br>
 <input type="button" onclick="process()" value="SUBMIT">
 <input type="reset" value="RESET">
+<button type="button">Click me</button>
+<br>
+<textarea id="TEXTAREA" rows="4" cols="40">
+</textarea>
 </form>
 </section>
 </body>
