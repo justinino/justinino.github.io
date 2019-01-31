@@ -8,14 +8,12 @@ body {
 .header {
   text-align: center;
   border-bottom: 1px solid black;
-  //background: white;
+  background: white;
 }
 .content {
   text-align: center;
 }
 table {
-    padding-top: 12px;
-    padding-bottom: 12px;
     text-align: left;
     background-color: white;
     margin: 0px auto;            
