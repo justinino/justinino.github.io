@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="CNIT 133 Homework 2 Part 4">
+  <title>CNIT 133 Homework 2 Part 4</title>
+  <link rel="stylesheet" href="../styles.css">
+<script>
+function process()
+{
+var temp, temp2, number1, i;
+var countries = ["British Pound", "Canadian Dollar", "Euro", "Japanese Yen", "Mexican Peso"]
+var xrate = [0.775, 1.345, 0.888, 109.35, 18.281]
+number1 = document.forms["myform"].elements["num1"].value;
+
+document.write( "<table style='border: 1px solid black;'><tr> " + "<th>Country</th> <th>Conversion</th></tr>" );
+
+for (i = 0; i < countries.length; i++) {
+  temp1 = xrate[i]*number1;
+	document.write( "<br><tr style='text-align:right;'><td>" + countries[i] + "</td>" + "<td>" + temp1.toFixed(2) + "</td>" + "</tr>" ); 
+    }
+}
+</script>
+<body>
+<div class="header">
+  <h3><a href="https://justinino.github.io/cnit133/hw1.html">Home</a> - <a href="https://justinino.github.io/cnit133/hw2.html">Homework 2</a> - <a href="https://justinino.github.io/cnit133/hw2files/part1.html">Part 1</a> - <a href="https://justinino.github.io/cnit133/hw2files/part2.html">Part 2</a> - 
+  <a href="https://justinino.github.io/cnit133/hw2files/part3.html">Part 3</a> - 
+  <a href="https://justinino.github.io/cnit133/hw2files/part4.html">Part 4</a> - 
+  <a href="https://justinino.github.io/cnit133/hw2files/ec.html">Extra Credit</a></h3>
+  <h1>CNIT 133 Homework 2 Part 4: Calculation Tables</h1>
+</div>
+<div class="content">
+  <form name="myform">
+  <table>
+  <tr>
+  <td>Enter a US dollar amount:</td>
+  <td><input type="number" name="num1" size="10"></td>
+  </tr>
+  </table>
+  <br>
+  <input type="button" onclick="process()" value="SUBMIT">
+  <input type="reset" value="RESET">
+  </form>
+</div>
+<script src="js/scripts.js"></script>
+</body>
+</html>
