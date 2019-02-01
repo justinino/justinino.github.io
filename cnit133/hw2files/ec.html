@@ -13,12 +13,11 @@ var temp, temp2, number1, i;
 var countries = ["British Pound", "Canadian Dollar", "Euro", "Japanese Yen", "Mexican Peso"]
 var xrate = [0.775, 1.345, 0.888, 109.35, 18.281]
 number1 = document.forms["myform"].elements["num1"].value;
-
-document.write( "<table style='border: 1px solid black;'><tr> " + "<th>Country</th> <th>Conversion</th></tr>" );
-
+document.getElementById('td1').innerHTML = number1;
 for (i = 0; i < countries.length; i++) {
-  temp1 = xrate[i]*number1;
-	document.write( "<br><tr style='text-align:right;'><td>" + countries[i] + "</td>" + "<td>" + temp1.toFixed(2) + "</td>" + "</tr>" ); 
+	temp1 = xrate[i]*number1;
+    temp2 = 'td' + i
+	document.getElementById(temp2).innerHTML = temp1.toFixed(2);
     }
 }
 </script>
@@ -33,6 +32,26 @@ for (i = 0; i < countries.length; i++) {
 <div class="content">
   <form name="myform">
   <table>
+  <tr>
+  <td>British Pound</td>
+  <td id="td0"></td>
+  </tr>
+  <tr>
+  <td>Canadian Dollar</td>
+  <td id="td1"></td>
+  </tr>
+  <tr>
+  <td>Euro</td>
+  <td id="td2"></td>
+  </tr>
+  <tr>
+  <td>Japanese Yen</td>
+  <td id="td3"></td>
+  </tr>
+  <tr>
+  <td>Mexican Peso</td>
+  <td id="td4"></td>
+  </tr>
   <tr>
   <td>Enter a US dollar amount:</td>
   <td><input type="number" name="num1" size="10"></td>
