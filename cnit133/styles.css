@@ -10,12 +10,12 @@ h1 {
   font-family: timesnewroman;
 }
 body {
-  background-color: #3D9970;
+  background-color: #cc0000;
 }
 .header {
   text-align: center;
   border-bottom: 1px solid black;
-  background: white;
+  background: gold;
 }
 .content {
   text-align: center;
