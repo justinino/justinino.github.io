@@ -1,0 +1,170 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="CNIT 133 Homework 2 Part 4">
+  <title>CNIT 133 Homework 2 Part 4</title>
+  <link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+
+
+$(document).ready(function() {
+
+/*
+All jQuery methods are inside a document.ready() function.
+This is to prevent any jQuery code from running before the document is 
+finished loading (is ready).
+*/
+
+
+
+
+	$('html').dblclick(function() {
+		alert('ouch');
+	}); // end doubleclick
+
+
+/*  
+An alert box will appear when a visitor clicks anywhere on the page twice. You need to
+select the element (the page in this case) that you wish to add the event to. 
+
+The $('html') selects the HTML element; basically, the entire browser window.
+
+.dblclick() is a jQuery function that gets the browser ready to make something
+happen when a visitor double-clicks on the page. It requires passing an anonymous function
+as an argument to the dblclick() function
+
+The function( ) { } is just the outer shell; it doesn't do anything until you
+add programming inside the { and }, namely the alert statement
+*/
+
+
+
+
+
+	$('a').mouseover(function() {
+		var message = "<p>You moused over a link</p>";
+		$('.main').append(message);
+	});      // end mouseover
+
+
+/*
+This code selects all links on a page (that's the $('a') part), then adds an anonymous
+function to the mouseover event. In other words, when someone mouses
+over any link on the page, something is going to happen.
+
+The line, var message = "<p>You moused over a link</p>"; creates
+a new variable named message and stores a string in it. The string is an HTML
+paragraph tag with some text. The next line selects an element on the page with
+a class name of main ( that's the $('.main') ) and then appends (or adds to the end
+of that element) the contents of the message variable. The page contains a <div>
+tag with the class of main, so this code simply adds "You moused over a link" to
+the end of that div each time a visitor mouses over a link on the page.
+*/
+
+
+
+
+	$('#button').click(function() {
+		$(this).val("Stop that!");
+	});      // end click
+
+
+/*
+when a visitor clicks on the form button on the page, the browser will change the text that appears on that
+button. You should understand the basics here: $('#button') selects an element with the
+ID button (the form button in this case), and adds a click event to it, so when
+someone clicks the button, something happens. In this example, the words
+"Stop that!" appear on the button. 
+
+$(this) refers to the element that is responding to the event-the element you select and attach the event to. 
+In this case, this is the form button.
+
+the jQuery val() is used to read the value from or change the value of a form element.
+In this example, passing the string "Stop that!" to the val() function sets
+the button's value to "Stop that!"
+*/
+
+
+
+
+	$('#textfield').focus(function() {
+		$(this).css('background-color','red');
+	});     // end focus
+
+
+/*
+This makes the text field's background color change to red when a visitor clicks or tabs into it.
+You need to (a) select the, text field; (b) use the focus( ) event; (c) use $(this) to
+address the text field inside the anonymous function; and (d) use the .css( ) function
+ to change the background color of the text field.
+*/
+
+}); // end ready
+
+
+</script>
+<script>
+function process()
+{
+var temp, temp2, number1, i;
+var countries = ["British Pound", "Canadian Dollar", "Euro", "Japanese Yen", "Mexican Peso"]
+var xrate = [0.775, 1.345, 0.888, 109.35, 18.281]
+number1 = document.forms["myform"].elements["num1"].value;
+document.getElementById('td1').innerHTML = number1;
+for (i = 0; i < countries.length; i++) {
+	temp1 = xrate[i]*number1;
+    temp2 = 'td' + i
+	document.getElementById(temp2).innerHTML = temp1.toFixed(2);
+    }
+}
+</script>
+<body>
+<div class="header">
+  <h3><a href="https://justinino.github.io/cnit133/hw1.html">Home</a> - <a href="https://justinino.github.io/cnit133/hw2.html">Homework 2</a> - <a href="https://justinino.github.io/cnit133/hw2files/part1.html">Part 1</a> - <a href="https://justinino.github.io/cnit133/hw2files/part2.html">Part 2</a> - 
+  <a href="https://justinino.github.io/cnit133/hw2files/part3.html">Part 3</a> - 
+  <a href="https://justinino.github.io/cnit133/hw2files/part4.html">Part 4</a> - 
+  <a href="https://justinino.github.io/cnit133/hw2files/ec.html">Extra Credit</a></h3>
+  <h1>CNIT 133 Homework 2 Part 4: Calculation Tables</h1>
+</div>
+<div class="content">
+  <br>
+  <form name="myform">
+  <table>
+  <tr>
+  <td>British Pound</td>
+  <td class="right" id="td0">
+  </tr>
+  <tr>
+  <td>Canadian Dollar</td>
+  <td class="right" id="td1">
+  </tr>
+  <tr>
+  <td>Euro</td>
+  <td class="right" id="td2">
+  </tr>
+  <tr>
+  <td>Japanese Yen</td>
+  <td class="right" id="td3">
+  </tr>
+  <tr>
+  <td>Mexican Peso</td>
+  <td class="right" id="td4">
+  </tr>
+  <div class="textfield">
+  <tr>
+  <td>Enter a US dollar amount:</td>
+  <td><input type="number" name="num1" size="10" class="right">
+  </tr>
+  </div>
+  </table>
+  <br>
+  <input type="button" onclick="process()" value="SUBMIT">
+  <input type="reset" value="RESET">
+  </form>
+</div>
+<script src="js/scripts.js"></script>
+</body>
+</html>
