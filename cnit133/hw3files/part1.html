@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html lang="en">
@@ -11,13 +12,11 @@
 function process()
 {
 var number1, number2, number3, number4, n1, n2, n3, n4, i, hwAvg, midExam, finalExam, ACR, final_average, grade, comment;
-
 hwAvg = parseInt(document.forms["myform"].elements["num1"].value);
 midExam = parseInt(document.forms["myform"].elements["num2"].value);
 finalExam = parseInt(document.forms["myform"].elements["num3"].value);
 ACR = parseInt(document.forms["myform"].elements["num4"].value);
 final_average = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * ACR);
-
 if (isNaN(hwAvg) || isNaN(midExam) || isNaN(finalExam) || isNaN(ACR) || hwAvg <= 0 || midExam <= 0 || finalExam <= 0 || ACR <= 0 || hwAvg > 100 || midExam > 100|| finalExam > 100 || ACR > 100) {
   document.forms["myform"].elements["num1"].value = " "; // clears hw input
   document.forms["myform"].elements["num2"].value = " "; //clears final exam input
@@ -46,6 +45,13 @@ else{
   }
 }
 </script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
 </head>
 
 <body>
@@ -64,6 +70,11 @@ else{
   <form name="myform">
   <table>
   <tr>
+  <td><div id="panel">The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers)</div></td> 
+  </tr>
+  <tr>
+  <td><div id="flip">Click to Show/Hide Instructions</div></td>
+  </tr>
   <td>Homework Average:</td>
   <td><input type="number" name="num1" size="10"></td>
   </tr>
