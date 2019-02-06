@@ -32,3 +32,6 @@ td, th {
 .right {
   text-align: right;
 }
+.hiddenpanels {
+  display: none;
+}
