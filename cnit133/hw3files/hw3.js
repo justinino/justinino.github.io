@@ -34,3 +34,13 @@ function process() {
         document.getElementById("TEXTAREA").value = "Final Average: " + final_average + "\n" + "Grade: " + grade + "\n" + comment;
     }
 }
+
+/* Part 3 */
+function ftoc() {
+    var num1, ftemp, ctemp;
+    document.forms["myform"].elements["ctemp"].value = 5/9 * (parseInt(document.forms["myform"].elements["ftemp"].value) - 32);
+}
+function ctof() {
+    var num1, ftemp, ctemp;
+    document.forms["myform"].elements["ftemp"].value = (9/5 * parseInt(document.forms["myform"].elements["ftemp"].value)) + 32;
+}
