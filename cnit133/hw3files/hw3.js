@@ -42,5 +42,5 @@ function ftoc() {
 }
 function ctof() {
     var num1, ftemp, ctemp;
-    document.forms["myform"].elements["ftemp"].value = (9/5 * parseInt(document.forms["myform"].elements["ftemp"].value)) + 32;
+    document.forms["myform"].elements["ftemp"].value = (9/5 * parseInt(document.forms["myform"].elements["ctemp"].value)) + 32;
 }
