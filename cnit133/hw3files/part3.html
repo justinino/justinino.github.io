@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CNIT 133 Homework 3 Functions Part 3">
+    <title>CNIT 133 Homework 3 Functions Part 3</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="hw3.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h3><a href="https://justinino.github.io/cnit133/hw1.html">Home</a> - 
+        <a href="https://justinino.github.io/cnit133/hw3.html">Homework 3</a> - 
+        <a href="https://justinino.github.io/cnit133/hw3files/part1.html">Part 1</a> - 
+        <a href="https://justinino.github.io/cnit133/hw3files/part2.html">Part 2</a> - 
+        <a href="https://justinino.github.io/cnit133/hw3files/part3.html">Part 3</a> - 
+        <a href="https://justinino.github.io/cnit133/hw3files/part4.html">Part 4</a></h3>
+        <h1>Student Grades</h1>
+    </div>
+    <br>
+    <div class="content">
+        <form name="myform">
+            <table>
+                <td><input type="number" name="ftemp" size="10"></td>
+                <td>°F</td>
+                </tr>
+                <tr>
+                <td><input type="number" name="ctemp" size="10"></td>
+                <td>°C</td>
+                </tr>
+            </table>
+            <br>
+            <input type="button" onclick="ftoc()" value="F to C">
+            <input type="button" onclick="ctof()" value="C to F">
+            <input type="reset" value="RESET">
+        </form>
+    </div>
+</body>
+</html>
