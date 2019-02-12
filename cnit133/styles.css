@@ -19,6 +19,7 @@ body {
 }
 .content {
   text-align: center;
+  width:100%;
 }
 table {
     text-align: left;
