@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CNIT 133 Homework 3 Functions Part 2">
+    <title>CNIT 133 Homework 3 Functions Part 2</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="hw3.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h3><a href="https://justinino.github.io/cnit133/hw1.html">Home</a> - 
+        <a href="https://justinino.github.io/cnit133/hw3.html">Homework 3</a> - 
+        <a href="https://justinino.github.io/cnit133/hw3files/part1.html">Part 1</a> - 
+        <a href="https://justinino.github.io/cnit133/hw3files/part2.html">Part 2</a> - 
+        <a href="https://justinino.github.io/cnit133/hw3files/part3.html">Part 3</a> - 
+        <a href="https://justinino.github.io/cnit133/hw3files/part4.html">Part 4</a></h3>
+        <h1>Student Grades</h1>
+    </div>
+    <br>
+    <div class="content">
+        <form name="myform">
+            <table>
+                <tr>
+                <td>Salesperson:</td>
+                <td><input type="text" name="salesperson" placeholder="Enter name" size="10"></td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr>
+                <th>Item #</th>
+                <th>Price</th>
+                <th>Number Sold</th>
+                <th>Total</th>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>$239.99</td>
+                <td><input type="text" class="t" name="int_item1"></td>
+                <td><input type="text"  class="t" name="total_item1"></td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>$129.75</td>
+                <td><input type="text" class="t" name="int_item2"></td>
+                <td><input type="text"  class="t" name="total_item2"></td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>$99.95</td>
+                <td><input type="text" class="t" name="int_item3"></td>
+                <td><input type="text"  class="t" name="total_item3"></td>
+                </tr>
+                <tr>
+                <td>4</td>
+                <td>$350.89</td>
+                <td><input type="text" class="t" name="int_item4"></td>
+                <td><input type="text" class="t" name="total_item4"></td>
+                </tr>
+                <tr>
+                <td colspan="3">Total Amount Sold:</td>
+                <td><input type="text" class="t" name="final_total"></td>
+                </tr>
+                <tr>
+                <td colspan="3">Total Weekly Earnings:</td>
+                <td><input type="text"  class="t" name="salary"></td>
+                </tr>
+            </table>
+            <br>
+            <input type="button" onclick="commission()" value="SUBMIT">
+            <input type="reset" value="RESET">
+        </form>
+    </div>
+</body>
+</html>
