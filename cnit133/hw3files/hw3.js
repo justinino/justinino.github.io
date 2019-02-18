@@ -35,6 +35,12 @@ function process() {
     }
 }
 
+/* Part 2 */
+function commission() {
+    
+    document.forms["myform"].elements["total_item1"].value = parseInt(document.forms["myform"].elements["item1_price"].value)*parseInt(document.forms["myform"].elements["int_item1"].value)
+    
+}
 /* Part 3 */
 function ftoc() {
     var num1, ftemp, ctemp;
