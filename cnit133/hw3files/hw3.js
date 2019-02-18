@@ -38,7 +38,7 @@ function process() {
 /* Part 2 */
 function commission() {
     
-    document.forms["myform"].elements["total_item1"].value = parseInt(document.forms["myform"].elements["item1_price"].value)*parseInt(document.forms["myform"].elements["int_item1"].value)
+    document.getElementById('total_item1').innerHTML = parseInt(document.forms["myform"].elements["item1_price"].value)*parseInt(document.forms["myform"].elements["int_item1"].value)
     
 }
 /* Part 3 */
