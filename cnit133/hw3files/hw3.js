@@ -37,14 +37,19 @@ function process() {
 
 /* Part 2 */
 function commission() {
-    var temp1, temp2, temp3, i;
+    var temp1, temp2, temp3, total, salary, i;
     var itemp = [239.99, 129.75, 99.95, 350.89]
+    total = 0;
     for (i = 0; i < itemp.length; i++) {
         temp1 = 'total_item' + i;
         temp2 = 'int_item' + i;
         temp3 = document.forms["myform"].elements[temp2].value*itemp[i]; 
+        total = total + temp3
         document.getElementById(temp1).innerHTML = '$' + temp3.toFixed(2);
         }
+    document.getElementById('final_total').innerHTML = '$' + total.toFixed(2);
+    salary = 0.09*total + 200;
+    document.getElementById('salary').innerHTML = '$' + salary.toFixed(2); 
 }
 /* Part 3 */
 function ftoc() {
