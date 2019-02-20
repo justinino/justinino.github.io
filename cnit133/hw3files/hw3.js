@@ -37,12 +37,23 @@ function process() {
 
 /* Part 2 */
 function commission() {
-    var temp1, temp2, temp3, total, salary, i;
+    var temp1, temp2, temp3, total, salary, i, j;
     var itemp = [239.99, 129.75, 99.95, 350.89]
     total = 0;
     for (i = 0; i < itemp.length; i++) {
         temp1 = 'total_item' + i;
         temp2 = 'int_item' + i;
+        if (document.forms["myform"].elements[temp2].value < 0) {
+        	alert("Please enter non negative numbers.");
+            document.forms["myform"].reset();
+            for (j = 0; j < itemp.length; j++) {
+            	temp1 = 'total_item' + j;
+           		document.getElementById(temp1).innerHTML = '';
+                document.getElementById('final_total').innerHTML = '';
+                document.getElementById('salary').innerHTML = '';
+            }
+            return;
+        }
         temp3 = document.forms["myform"].elements[temp2].value*itemp[i]; 
         total = total + temp3
         document.getElementById(temp1).innerHTML = '$' + temp3.toFixed(2);
