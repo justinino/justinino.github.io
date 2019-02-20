@@ -11,7 +11,7 @@ function process() {
     if (isNaN(hwAvg) || isNaN(midExam) || isNaN(finalExam) || isNaN(ACR) || hwAvg <= 0 || midExam <= 0 || finalExam <= 0 || ACR <= 0 || hwAvg > 100 || midExam > 100|| finalExam > 100 || ACR > 100) {
         document.forms["myform"].reset(); //reset form inputs
         document.forms["myform"].elements["num1"].focus(); // focuses cursor to hw input
-        alert("Please enter values values that are numbers between 0 and 100.");
+        alert("Please enter values that are numbers between 0 and 100.");
     } else{
         final_average = Math.round((.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * ACR));
         comment = ''
