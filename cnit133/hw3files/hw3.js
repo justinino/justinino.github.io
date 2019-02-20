@@ -9,10 +9,7 @@ function process() {
     ACR = parseInt(document.forms["myform"].elements["num4"].value);
     final_average = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * ACR);
     if (isNaN(hwAvg) || isNaN(midExam) || isNaN(finalExam) || isNaN(ACR) || hwAvg <= 0 || midExam <= 0 || finalExam <= 0 || ACR <= 0 || hwAvg > 100 || midExam > 100|| finalExam > 100 || ACR > 100) {
-        document.forms["myform"].elements["num1"].value = " "; // clears hw input
-        document.forms["myform"].elements["num2"].value = " "; //clears final exam input
-        document.forms["myform"].elements["num3"].value = " "; // clears hw input
-        document.forms["myform"].elements["num4"].value = " "; //clears final exam input
+        document.forms["myform"].reset(); //reset form inputs
         document.forms["myform"].elements["num1"].focus(); // focuses cursor to hw input
         alert("Please enter values values that are numbers between 0 and 100.");
     } else{
