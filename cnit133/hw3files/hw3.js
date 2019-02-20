@@ -68,3 +68,26 @@ function ctof() {
     var num1, ftemp, ctemp;
     document.forms["myform"].elements["ftemp"].value = (9/5 * parseInt(document.forms["myform"].elements["ctemp"].value)) + 32;
 }
+
+/* Part 4 */
+var mathnum1, mathnum2;
+function newquestion() {
+    document.forms["myform"].reset();
+    min = Math.ceil(1);
+    max = Math.floor(9);
+    mathnum1 = Math.floor(Math.random() * (max - min + 1)) + min;
+    mathnum2 = Math.floor(Math.random() * (max - min + 1)) + min;
+    question = 'What is ' + mathnum1.toString() + ' times ' + mathnum2.toString() + '?';
+    document.getElementById("question").innerHTML = question;
+}
+function mathcheck() {
+    result = mathnum1*mathnum2;
+    if (document.forms["myform"].elements["answer"].value == result) {
+        var correct = confirm("Correct! Press OK for new question or cancel to exit.");
+  		if (correct) {
+    	    newquestion();
+        } else {
+            return;
+  		}
+    }
+}
