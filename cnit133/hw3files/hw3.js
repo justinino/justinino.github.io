@@ -17,10 +17,13 @@ function process() {
         comment = ''
         if (final_average <= 100 && final_average >= 90) {
             grade = 'A'
+            comment = '<br>'
         } else if (final_average < 90 && final_average >= 80) {
             grade = 'B'
+            comment = '<br>'
         } else if (final_average < 80 && final_average >= 70) {
             grade = 'C'
+            comment = '<br>'
         } else if (final_average < 70 && final_average >= 60) {
             grade = 'D'
             comment = 'Student must retake course'
