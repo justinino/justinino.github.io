@@ -28,7 +28,7 @@ function process() {
             grade = 'F'
             comment = 'Student must retake course'
         }
-        document.getElementById("TEXTAREA").value = "Final Average: " + final_average + "\n" + "Grade: " + grade + "\n" + comment;
+        document.getElementById('finalgrade').innerHTML = "Final Average: " + final_average + "\n" + "Grade: " + grade + "\n" + comment;
     }
 }
 
