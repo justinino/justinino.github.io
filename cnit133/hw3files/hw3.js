@@ -86,7 +86,7 @@ function newquestion() {
 function mathcheck() {
     result = mathnum1*mathnum2;
     if (document.forms["myform"].elements["answer"].value == result) {
-        var correct = confirm("Correct! Press OK for new question or cancel to exit.");
+        var correct = confirm("Very good! Press OK for new question or cancel to exit.");
         document.forms["myform"].reset();
   		if (correct) {
     	    newquestion();
