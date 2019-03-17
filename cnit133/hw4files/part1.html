@@ -8,53 +8,49 @@
     <title>CNIT 133 Homework 4 Functions Part 1</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="hw4.js"></script>
-    <script> 
-        $(document).ready(function(){
-            $("#flip").click(function(){
-                $("#hiddenpanels").slideToggle("slow");
-            });
-        });
+    <script>
+        $( function() {
+            $( "#draggable" ).draggable();
+        } );
     </script>
 </head>
 
-<body onload="addition()">
+<body onload="math()">
     <div class="header">
         <h3><a href="https://justinino.github.io/cnit133/hw1.html">Home</a> - 
-        <a href="https://justinino.github.io/cnit133/hw4.html">Homework 4</a> - 
-        <a href="https://justinino.github.io/cnit133/hw4files/part1.html">Part 1</a> - 
-        <a href="https://justinino.github.io/cnit133/hw4files/part2.html">Part 2</a> - 
-        <a href="https://justinino.github.io/cnit133/hw4files/part3.html">Extra Credit</a></h3>
-        <h1>Student Grades</h1>
+            <a href="./hw4.html">Homework 4</a> - 
+            <a href="./hw4files/part1.html">Part 1</a> - 
+            <a href="./hw4files/part2.html">Part 2</a> - 
+            <a href="./hw4files/ec.html">Extra Credit</a></h3>
+        <h1>Product and Sum</h1>
     </div>
     <br>
     <div class="content">
-        <div class="hiddenpanels" id="hiddenpanels">The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers)</div>
-        <div id="flip">Click to Show/Hide Instructions</div>
         <br>
-        <form name="myform">
+        <div id="draggable" class="ui-widget-content">
+            <p>Drag me around!</p>
             <table>
                 <tr>
-                <td> id="3timestxt" </td>
-                <td> id="3timesresult" </td>
+                <td id="3timestxt"></td>
+                <td id="3timesresult"></td>
                 </tr>
                 <tr>
-                <td> id="3plustxt" </td>
-                <td> id="3plusresult" </td>
+                <td id="3plustxt"> </td>
+                <td id="3plusresult">  </td>
                 </tr>
                 <tr>
-                <td> id="4timestxt" </td>
-                <td> id="4timesresult" </td>
+                <td id="4timestxt"></td>
+                <td id="4timesresult"></td>
                 </tr>
                 <tr>
-                <td> id="4plustxt" </td>
-                <td> id="4plusresult" </td>
+                <td id="4plustxt"></td>
+                <td id="4plusresult"></td>
                 </tr>
             </table>
-            <br>
-            <input type="button" onclick="process()" value="SUBMIT">
-            <input type="reset" value="RESET">
-        </form>
+        </div>
+        <br>
     </div>
 </body>
 </html>
