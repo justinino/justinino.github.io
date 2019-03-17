@@ -48,3 +48,19 @@ function math() {
     document.getElementById('4timesresult').innerHTML = result4.toLocaleString();
     
 }
+
+function interest() {
+    for (i = 0.05; i <= 0.10; i = i + 0.01) {
+        for (j = 1; j <= 10; j++){
+            final = 1000*Math.pow(1 + i, j)
+            var x = document.getElementById('intTable').insertRow(intTable.rows.length);
+            var y = x.insertCell(0);
+            var z = x.insertCell(1);
+            var r = x.insertCell(2);
+            y.innerHTML=i.toFixed(2);
+            z.innerHTML=final.toFixed(2);
+            r.innerHTML=j;
+        }
+
+    }
+}
