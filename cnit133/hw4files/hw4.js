@@ -42,34 +42,25 @@ function math() {
       result4 = result4 + j; 
       j = j + 4;
     }
-    document.getElementById('4timestxt').innerHTML = text3 + '=';
-    document.getElementById('4timesresult').innerHTML = result3.toLocaleString();
-    document.getElementById('4plustxt').innerHTML = text4 + '=';
-    document.getElementById('4plusresult').innerHTML = result4.toLocaleString();
+    document.getElementById('4plustxt').innerHTML = text3 + '=';
+    document.getElementById('4plusresult').innerHTML = result3.toLocaleString();
+    document.getElementById('4timestxt').innerHTML = text4 + '=';
+    document.getElementById('4timesresult').innerHTML = result4.toLocaleString();
+    
 }
-/* Part 2 */
-function interest() {
-    for (i = 0.05; i <= 0.10; i = i + 0.01) {
-        for (j = 1; j <= 10; j++){
-            final = 1000*Math.pow(1 + i, j)
-            if(j == 1 ){
-              document.getElementById('row1').innerHTML = i.toFixed(2);
-              document.getElementById('row1_2').innerHTML = final.toFixed(2);
-              document.getElementById('row1_3').innerHTML = j;
-            } else {
-            var x = document.getElementById('intTable').insertRow(intTable.rows.length);
-            var y = x.insertCell(0);
-            var z = x.insertCell(1);
-            var r = x.insertCell(2);
-            y.innerHTML=i.toFixed(2);
-            z.innerHTML=final.toFixed(2);
-            r.innerHTML=j;
-            }
-        }
 
-    }
+function interest() {
+  var e = document.getElementById("rate");
+  var i= e.options[e.selectedIndex].value;
+  i = parseFloat(i);
+  for (j = 1; j <= 10; j++){
+      final = 1000*Math.pow(1 + i, j)
+      document.getElementById('row' + j).innerHTML = j;
+      document.getElementById('row' + j + '_2').innerHTML = final.toFixed(2);
+      document.getElementById('row' + j + '_3').innerHTML = i.toFixed(2);
+      }
 }
-/* Extra Credit */
+
 function square() {
   i = document.forms["myform"].elements["width"].value;
   j = document.forms["myform"].elements["height"].value;
@@ -95,7 +86,6 @@ function square() {
           output = output + ' '
         }
       }
-      
     }
   }
   document.getElementById("TEXTAREA").value = output 
