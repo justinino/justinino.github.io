@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CNIT 133 Homework 4 Functions Part 1">
+    <title>CNIT 133 Homework 4 Functions Part 1</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="hw4.js"></script>
+    <style>
+        .squares {
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+
+<body onload="math()">
+    <div class="header">
+        <h3><a href="../hw1.html">Home</a> - 
+            <a href="../hw4.html">Homework 4</a> - 
+            <a href="./part1.html">Part 1</a> - 
+            <a href="./part2.html">Part 2</a> - 
+            <a href="./ec.html">Extra Credit</a></h3>
+        <h1>Squares</h1>
+    </div>
+    <br>
+    <div class="content">
+        <br>
+        <form name="myform">
+            <table>
+                <tr>
+                <td>Width</td>
+                <td><input type="number" name="width"></td>
+                </tr>
+                <tr>
+                <td>Height</td>
+                <td><input type="number" name="height"></td>
+                </tr>
+            </table>
+            <br>
+            <input type="button" onclick="square()" value="SUBMIT">
+            <input type="reset" value="RESET">
+        </form>
+        <br>
+        <div class="squares">
+            <textarea id="TEXTAREA" rows="15" cols="15">
+        </div>
+        
+    </div>
+</body>
+</html>
