@@ -42,11 +42,10 @@ function math() {
       result4 = result4 + j; 
       j = j + 4;
     }
-    document.getElementById('4plustxt').innerHTML = text3 + '=';
-    document.getElementById('4plusresult').innerHTML = result3.toLocaleString();
-    document.getElementById('4timestxt').innerHTML = text4 + '=';
-    document.getElementById('4timesresult').innerHTML = result4.toLocaleString();
-    
+    document.getElementById('4timestxt').innerHTML = text3 + '=';
+    document.getElementById('4timesresult').innerHTML = result3.toLocaleString();
+    document.getElementById('4plustxt').innerHTML = text4 + '=';
+    document.getElementById('4plusresult').innerHTML = result4.toLocaleString();
 }
 /* Part 2 */
 function interest() {
