@@ -48,11 +48,16 @@ function math() {
     document.getElementById('4timesresult').innerHTML = result4.toLocaleString();
     
 }
-
+/* Part 2 */
 function interest() {
     for (i = 0.05; i <= 0.10; i = i + 0.01) {
         for (j = 1; j <= 10; j++){
             final = 1000*Math.pow(1 + i, j)
+            if(j == 1 ){
+              document.getElementById('row1').innerHTML = i.toFixed(2);
+              document.getElementById('row1_2').innerHTML = final.toFixed(2);
+              document.getElementById('row1_3').innerHTML = j;
+            } else {
             var x = document.getElementById('intTable').insertRow(intTable.rows.length);
             var y = x.insertCell(0);
             var z = x.insertCell(1);
@@ -60,7 +65,39 @@ function interest() {
             y.innerHTML=i.toFixed(2);
             z.innerHTML=final.toFixed(2);
             r.innerHTML=j;
+            }
         }
 
     }
+}
+/* Extra Credit */
+function square() {
+  i = document.forms["myform"].elements["width"].value;
+  j = document.forms["myform"].elements["height"].value;
+  if(i < 2 || i > 10 || j < 2 || j > 10) {
+    document.forms["myform"].reset(); //reset form inputs
+    document.forms["myform"].elements["width"].focus(); // focuses cursor to hw input
+    alert("Please enter values that are between 2 and 10, inclusive.");
+  } else{
+    output = ''
+    //height
+    for (k = 1; k <= j; k++) {
+      //width
+      for (m = 1; m <= i; m++) {
+        if(m == i && k == 1 || m == i && k == j) {
+          output = output + '*' + '\n'
+        } else if(k == 1 || k == j){
+          output = output + '*'
+        } else if(m == 1){
+          output = output + '*'
+        } else if(m == i){
+          output = output + '*' + '\n'
+        } else {
+          output = output + ' '
+        }
+      }
+      
+    }
+  }
+  document.getElementById("TEXTAREA").value = output 
 }
