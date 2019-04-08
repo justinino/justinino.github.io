@@ -23,10 +23,37 @@
     </div>
     <br>
     <div class="content">
+        <form name="myForm">
+            <h3>Enter a state name(all lower or upper case): <input type="text" name="name"></h3>
+            <br>
+            <input type="button" value="State Info" onclick="stateInfo()">
+        </form>
         <br>
-        <div>
-        </div>
-        <br>
+        <form name="stateInfos">
+            <table id="stateTable">
+                <col width="200">
+                <col width="200">
+                <col width="200">
+                <col width="200">
+                <thead>
+                    <tr>
+                    <td>State Abbr</td>
+                    <td>State Name</td>
+                    <td>Capital</td>
+                    <td>Population</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td id="row1"></td>
+                    <td id="row1_2"></td>
+                    <td id="row1_3"></td>
+                    <td id="row1_4"></td>
+                    </tr>                            
+                </tbody>
+            </table>
+        </form>
+            
     </div>
 </body>
 </html>
