@@ -19,30 +19,32 @@
             <a href="./part1.html">Part 1</a> - 
             <a href="./part2.html">Part 2</a> - 
             <a href="./part3.html">Part 3</a></h3>
-        <h1>Event Handler</h1>
+        <h1>Fantasy Website Chooser</h1>
     </div>
     <br>
     <div class="content">
-        <br>
+        Select a drop down below..
         <form name="myForm">
-        <select name="destList" onchange="urlGo(this.form);">
-            <option>Choose website:</option>
-            <option value="http://www.yahoo.com/">Yahoo</option>
-            <option value="http://www.w3.org/">W3C</option>
-            <option value="http://www.mozilla.org/">Mozilla</option>
-            <option value="http://www.ccsf.edu/cnit">CNIT</option>
+            <select name="destList" onchange="urlGo(this.form);">
+                <option>Choose a fantasy website:</option>
+                <option value="http://www.espn.com/fantasy/">ESPN</option>
+                <option value="https://www.fantrax.com/">Fantrax</option>
+                <option value="https://sports.yahoo.com/fantasy/">Yahoo</option>
+                <option value="https://sleeper.app/">Sleeper</option>
             </select>
         </form>
-            <form>
+        <br>
+        ..or select a drop down and press go!
+        <br>
+        <form>
             <select name="destList">
-            <option value="http://www.yahoo.com/">Yahoo</option>
-            <option value="http://www.w3.org/">W3C</option>
-            <option value="http://www.mozilla.org/">Mozilla</option>
-            <option value="http://www.ccsf.edu/cnit">CNIT</option>
+                <option value="http://www.espn.com/fantasy/">ESPN</option>
+                <option value="https://www.fantrax.com/">Fantrax</option>
+                <option value="https://sports.yahoo.com/fantasy/">Yahoo</option>
+                <option value="https://sleeper.app/">Sleeper</option>
             </select>
-            
             <input type="button" value="Go" onclick="urlGo(this.form);">
-            </form>
+        </form>
         <br>
     </div>
 </body>
