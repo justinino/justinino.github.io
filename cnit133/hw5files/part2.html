@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CNIT 133 Homework 4 Arrays Part 2">
+    <title>CNIT 133 Homework 5 Arrays Part 2</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="hw5.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h3><a href="../hw1.html">Home</a> - 
+            <a href="../hw5.html">Homework 5</a> - 
+            <a href="./part1.html">Part 1</a> - 
+            <a href="./part2.html">Part 2</a> - 
+            <a href="./part3.html">Part 3</a></h3>
+        <h1>Event Handler</h1>
+    </div>
+    <br>
+    <div class="content">
+        <br>
+        <form name="myForm">
+        <select name="destList" onchange="urlGo(this.form);">
+            <option>Choose website:</option>
+            <option value="http://www.yahoo.com/">Yahoo</option>
+            <option value="http://www.w3.org/">W3C</option>
+            <option value="http://www.mozilla.org/">Mozilla</option>
+            <option value="http://www.ccsf.edu/cnit">CNIT</option>
+            </select>
+        </form>
+            <form>
+            <select name="destList">
+            <option value="http://www.yahoo.com/">Yahoo</option>
+            <option value="http://www.w3.org/">W3C</option>
+            <option value="http://www.mozilla.org/">Mozilla</option>
+            <option value="http://www.ccsf.edu/cnit">CNIT</option>
+            </select>
+            
+            <input type="button" value="Go" onclick="urlGo(this.form);">
+            </form>
+        <br>
+    </div>
+</body>
+</html>
