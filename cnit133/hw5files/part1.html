@@ -22,30 +22,37 @@
         <h1>User Inputs</h1>
     </div>
     <br>
-        <br>
-        <form name="myForm" onsubmit="return validateForm()" method="post" action="mailto:someone@example.com">
-            <h3>Enter animal name: <input type="text" name="name" size="10"></h3>
-            <br>
-            <input type="radio" name="animal" value="dog"> Dog<br>
-            <input type="radio" name="animal" value="cat"> Cat<br>
-            <input type="radio" name="animal" value="other"> Other<br>  
-            Gender: <select name="gender">
-                <option value=""></option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            <br>
-            Colour? Select all that apply. 
-            <br>
-            <input type="checkbox" name="colour" value="Brown"> Brown <br>
-            <input type="checkbox" name="colour" value="Black"> Black <br>
-            <input type="checkbox" name="colour" value="White"> White <br>
-            <input type="checkbox" name="colour" value="Grey"> Grey <br>
-            <input type="checkbox" name="colour" value="Red"> Red <br>
-            <br>
-            <br>
-            <input type="submit" value="Submit" onclick="goToNewPage(this.form);">
-        </form>
-        <br>
+    <br>
+    <div class="content">
+        <div class="left">
+            <form name="myForm" onsubmit="return validateForm()" method="post" action="mailto:someone@example.com">
+                <h3>Enter animal name: <input type="text" name="name"></h3>
+                <br>
+                <input type="radio" name="animal" value="dog"> Dog<br>
+                <input type="radio" name="animal" value="cat"> Cat<br>
+                <input type="radio" name="animal" value="other"> Other<br>  
+                <br>
+                Gender: 
+                <select name="gender">
+                    <option value=""></option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <br>
+                <br>
+                Colour? Select all that apply. 
+                <br>
+                <br>
+                <input type="checkbox" name="colour" value="Brown"> Brown <br>
+                <input type="checkbox" name="colour" value="Black"> Black <br>
+                <input type="checkbox" name="colour" value="White"> White <br>
+                <input type="checkbox" name="colour" value="Grey"> Grey <br>
+                <input type="checkbox" name="colour" value="Red"> Red <br>
+                <br>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
