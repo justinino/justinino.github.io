@@ -50,3 +50,8 @@ td, th {
   text-align: left;
   display: inline-block;
 }
+.colWidth {
+  -webkit-column-width: 300px;
+  -moz-column-width: 300px; 
+  column-width: 300px;
+}
