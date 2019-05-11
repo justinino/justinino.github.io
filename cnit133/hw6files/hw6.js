@@ -1,8 +1,10 @@
 function mathFunctions() {
-    var x = myform.floatNum.value;
-    myform.round.value = Math.round(x);
-    myform.squareRoot.value = Math.round(Math.sqrt(x));
-    myform.tenths.value = x.toFixed(0.1);
+    var x = myForm.floatNum.value;
+    document.getElementById('round').innerHTML = Math.round(x);
+    document.getElementById('squareRoot').innerHTML = Math.round(Math.sqrt(x));
+    document.getElementById('tenths').innerHTML = Math.floor( x * 10 + .5 ) / 10;
+    document.getElementById('hundredreths').innerHTML = Math.floor( x * 100 + .5 ) / 100;
+    document.getElementById('thousandths').innerHTML = Math.floor( x * 1000 + .5 ) / 1000;
 }
 function searchString() {
     var x = myForm.searchField.value;
