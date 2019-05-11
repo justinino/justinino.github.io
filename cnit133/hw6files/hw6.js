@@ -1,3 +1,9 @@
+function mathFunctions() {
+    var x = myform.floatNum.value;
+    myform.round.value = Math.round(x);
+    myform.squareRoot.value = Math.round(Math.sqrt(x));
+    myform.tenths.value = x.toFixed(0.1);
+}
 function searchString() {
     var x = myForm.searchField.value;
     var y = myForm.searchText.value;
