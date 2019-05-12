@@ -20,3 +20,17 @@ window.onclick = function(event) {
     }
   }
 }
+
+function pageChange() {
+  alert(hi);
+}
+
+function colorChange(colorName) {
+  var body = document.getElementById("body");
+  body.className = colorName;
+}
+function fontChange() {
+  var selectedFontSize = document.getElementById('fontSize').value;
+  var body = document.getElementById("body");
+  body.className = "2em";
+}
