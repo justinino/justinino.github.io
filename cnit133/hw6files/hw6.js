@@ -70,7 +70,17 @@ function dateLoad() {
     document.getElementById('row5_2').innerHTML = d.getTimezoneOffset()/60 - 3;
 }
 
-function phoneNumber() {
+function splitNum() {
+    //get 7 digit number
     var x = myForm.phoneNum.value;
-    
+    var reNum = /^\(\d{3}\)/;
+    var num = x.split(reNum);
+    myForm.sevenNum.value = num[1];
+
+    //get area code
+    var y = myForm.phoneNum.value;
+    var reArea = /(\s).{8}/;
+    var areaCode = y.split(reArea);
+    myForm.areaCode.value = areaCode[0];
+
 }
