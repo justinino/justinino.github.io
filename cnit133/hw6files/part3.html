@@ -8,8 +8,17 @@
     <title>CNIT 133 Homework 6 Objects Part 3</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  
+    
     <script src="hw6.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('input[name="phone-number"]').mask('(000) 000-0000');
+        });
+    </script>
 </head>
 
 <body onload="dateLoad()">
@@ -24,48 +33,49 @@
     <br>
     <div class="content">
         <table id="dateTable">
-                <thead>
-                    <tr>
-                    <td>Type</td>
-                    <td>Value</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="row1"></td>
-                        <td id="row1_2"></td>
-                    </tr>  
-                    <tr>
-                        <td id="row2"></td>
-                        <td id="row2_2"></td>
-                    </tr>         
-                    <tr>
-                        <td id="row3"></td>
-                        <td id="row3_2"></td>
-                    </tr>    
-                    <tr>
-                        <td id="row4"></td>
-                        <td id="row4_2"></td>
-                    </tr> 
-                    <tr>
-                        <td id="row5"></td>
-                        <td id="row5_2"></td>
-                    </tr>  
-                </tbody>
+            <thead>
+                <tr>
+                <td>Type</td>
+                <td>Value</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="row1"></td>
+                    <td id="row1_2"></td>
+                </tr>  
+                <tr>
+                    <td id="row2"></td>
+                    <td id="row2_2"></td>
+                </tr>         
+                <tr>
+                    <td id="row3"></td>
+                    <td id="row3_2"></td>
+                </tr>    
+                <tr>
+                    <td id="row4"></td>
+                    <td id="row4_2"></td>
+                </tr> 
+                <tr>
+                    <td id="row5"></td>
+                    <td id="row5_2"></td>
+                </tr>  
+            </tbody>
         </table>
         <br>
         <form name="myForm">
             Type phone number:
             <br>
             <br>
-            <input type="text" name="phoneNum">
+            Phone Number Example
+            <input type="text" name="phone-number" id="phoneNum"/>
             <br>
             <br>
             <input type="button" onclick="splitNum()" value="SUBMIT"><input type="reset" value="Reset">
             <br>
             <br>
             Found number:
-            <input type="number" name="areaCode" disabled> <input type="number" name="sevenNum" disabled>
+            <input type="text" name="areaCode" disabled> <input type="text" name="sevenNum" disabled>
         </form>
     </div>
 </body>
