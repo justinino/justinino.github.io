@@ -3,12 +3,53 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="CNIT 133 Homework">
-  <title>CNIT 133 Homework</title>
+  <meta name="description" content="CNIT 133 Homework 7 Object Model and Misc JQuery">
+  <title>CNIT 133 Homework 7 Object Model and Misc JQuery</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+   $('.answer').hide();
+   $('.main h2').toggle(
+          function() {
+             $(this).next('.answer').slideDown();
+             $(this).addClass('close');
+          },
+          function() {
+             $(this).next('.answer').fadeOut();
+             $(this).removeClass('close');
+        }
+      ); // end toggle
+  }); // end ready
+  </script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<h1>HW7</h1><br>
-<h1>Coming Soon!</h1>
+<div class="header">
+  <h3><a href="./hw1.html">Home</a> - 
+  <a href="./hw7.html">Homework 6</a> - 
+  <a href="./hw7files/part1.html">Part 1</a> - 
+  <a href="./hw7files/part2.html">Part 2</a> - 
+  <a href="./hw7files/part3.html">Part 3</a></h3>
+  <h1>CNIT 133 Homework 7 Object Model and Misc JQuery</h1>
+</div>
+<br>
+<div class="content">
+    <div class="main">
+        <h2>Part 1</h2>
+        <div class="answer">
+            <p>Custom Webpage <a href="./hw7files/part1.html">Part 1</a></p>
+        </div>
+        <h2>Part 2</h2>
+        <div class="answer">
+            <p>Homework Navigation <a href="./hw7files/part2.html">Part 2</a></p>
+        </div>
+        <h2>Part 3</h2>
+        <div class="answer">
+            <p>Photo Slide Show <a href="./hw7files/part3.html">Part 3</a></p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
