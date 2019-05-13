@@ -1,7 +1,7 @@
-//part 1
+//Part 1
+
 function switchStyle(style) 
 {
-
     var body = document.getElementById("body");
     if(style == 0) {
         body.className = "blue";
@@ -16,7 +16,6 @@ function switchStyle(style)
         body.className = "orange";
     }
 }
-
 function switchFontStyle(style) 
 {
     var body = document.getElementById("body");
@@ -83,9 +82,8 @@ function selectFontSize()
     }           
 }
 
-//part2 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
+//Part2 
+
 function dropDown(hwID) {
     document.getElementById(hwID).classList.toggle("show");
 }
