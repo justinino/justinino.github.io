@@ -42,12 +42,6 @@ function switchFontWeight(style)
     }
 }
 
-function switchToImpact()
-{
-    var body = document.getElementById("body");
-    body.className = "impactFont";
-}
-
 function switchToArial()
 {
     var body = document.getElementById("body");
