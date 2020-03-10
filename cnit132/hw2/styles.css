@@ -1,0 +1,48 @@
+body {
+    background-color: yellow;
+}
+
+h1 {
+    color:red;
+    text-align: center;
+}
+h2 {
+    color:blue;
+    text-align: right;
+    font-style: italic;
+}
+h3 {
+    color:red;
+    text-align: right;
+}
+
+a:link {
+    color: red;
+}
+a:visited {
+    color:blue;
+}
+
+.letter {
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.words {
+    color: red;
+}
+.bigblue {
+    font-size: 30px;
+}
+table {
+    background-color: cyan;
+    border-spacing: 10px;
+}
+td {
+    text-align: center;
+    padding: 10px;
+}
+.bold {
+    font-weight: bold;
+}
