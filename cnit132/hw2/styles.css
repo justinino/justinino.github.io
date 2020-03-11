@@ -37,7 +37,10 @@ a:visited {
 }
 table {
     background-color: cyan;
+    color:black;
     border-spacing: 10px;
+    animation-name: tablechange;
+    animation-duration: 5s;
     animation-fill-mode: forwards;
 }
 td {
@@ -47,3 +50,16 @@ td {
 .bold {
     font-weight: bold;
 }
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    
+  }
+  
+  @keyframes tablechange {
+    from {background-color: cyan;
+        color:black;}
+    to {background-color:green;
+        color:white;}
+  }
