@@ -63,3 +63,19 @@ div {
     to {background-color:green;
         color:white;}
   }
+
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: banner;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes banner {
+    0%   {left:0px; top:0px;}
+    50%  {left:95%;}
+    100% {left:0px;}
+  }
