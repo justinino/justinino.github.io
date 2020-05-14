@@ -8,10 +8,7 @@
   body {
     background-color: var(--main-color);
 }
-.grid1 { grid-area: header; }
-.grid2 { grid-area: menu; }
-.grid3 { grid-area: main; }
-.grid4 { grid-area: footer; }
+
 
 .grid-container {
   display: grid;
@@ -25,7 +22,7 @@
 .grid-container > div {
   text-align: center;
   padding: 20px 0;
-  font-size: 30px;
+  font-size: 2em;
 }
 
 .grid1 {

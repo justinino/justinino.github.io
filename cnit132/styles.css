@@ -1,11 +1,55 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    vertical-align: baseline;
-}
-body {
-    background-color: goldenrod;
-    overflow: auto;
+
+:root {
+    --main-color: black;
+    --main-bg-color: white;  
+    --main-text-color: maroon;  
+    --hf-bg-color: gray;  
+    --hf-text-color: blue;  
   }
+body {
+    background-color: var(--main-color);
+    height: 100vh;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 100px 1fr 100px;
+  grid-gap: 10px;
+  padding: 10px;
+  min-width: 860px;
+}
+
+
+.header {
+  grid-column: 1 / span 3;
+  background-color: var(--hf-bg-color);
+  color: var(--hf-text-color);
+  display: inline-block;
+}
+
+.nav {
+  grid-column: 1 / span 1;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.content {
+  grid-column: 2 / span 2;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.footer {
+  grid-column: 1 / span 3;
+  background-color: var(--hf-bg-color);
+  color:var(--hf-text-color);
+}
+
+img {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+  }
+  
