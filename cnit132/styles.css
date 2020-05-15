@@ -46,10 +46,3 @@ body {
   background-color: var(--hf-bg-color);
   color:var(--hf-text-color);
 }
-
-img {
-    width: 32px;
-    height: 32px;
-    display: inline-block;
-  }
-  
