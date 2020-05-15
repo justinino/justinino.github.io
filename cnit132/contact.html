@@ -24,17 +24,17 @@
   </ul>
 </div>
 <div class="content">
-    <form action="!">
+    <form action="/" method="post">
         <fieldset>
          <legend>Contact</legend>
          <label for="fname">First name:</label><br>
-         <input type="text" id="fname" name="fname"><br>
+         <input type="text" id="fname" name="fname" required><br>
          <label for="lname">Last name:</label><br>
-         <input type="text" id="lname" name="lname"><br>
+         <input type="text" id="lname" name="lname" required><br>
          <label for="email">Email:</label><br>
-         <input type="email" id="email" name="email"><br>
-         <label>Comment:</label><br>
-         <textarea name="comment"></textarea><br>
+         <input type="email" id="email" name="email" required><br>
+         <label for="comment">Comment:</label><br>
+         <textarea id="comment" name="comment"></textarea><br>
          <input type="submit" value="Submit">
         </fieldset>
        </form>
