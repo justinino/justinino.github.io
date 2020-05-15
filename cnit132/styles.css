@@ -2,9 +2,9 @@
 :root {
     --main-color: black;
     --main-bg-color: white;  
-    --main-text-color: maroon;  
-    --hf-bg-color: gray;  
-    --hf-text-color: blue;  
+    --main-text-color: black;  
+    --hf-bg-color: grey;  
+    --hf-text-color: black;  
   }
 body {
     background-color: var(--main-color);
